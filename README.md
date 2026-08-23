@@ -1,12 +1,16 @@
 # Cord: Marigold
 
+<p align="center">
+  <img src="ScreenShot/s1.jpg" width="85%" alt="메인 화면">
+</p>
+
 Unity 기반으로 제작한 3인칭 건슈팅 디펜스 게임입니다.
 
 플레이어는 다양한 무기와 아이템을 활용해 기지를 방어하며, 스테이지마다 등장하는 적을 처치하고 상점을 통해 능력과 장비를 강화하며 게임을 진행합니다.
 
 ---
 
-## 📖 프로젝트 소개
+## 프로젝트 소개
 
 Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방어하는 3인칭 건슈팅 디펜스 게임입니다.
 
@@ -16,17 +20,20 @@ Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방
 
 | 항목 | 내용 |
 | --- | --- |
-| 개발 기간 | 3개월 |
-| 개발 인원 | 총 4명 |
-| 팀 구성 | 아트 3명 / 기획·프로그래밍 1명 (본인) |
 | 플랫폼 | PC |
 | 개발 엔진 | Unity |
 | 개발 언어 | C# |
-| 담당 역할 | 게임 기획 / 클라이언트 프로그래밍 |
+| 개발 기간 | 2025.03.01 ~ 2025.06.18 |
+| 개발 인원 | 총 4명 |
+| 팀 구성 | 아트 3명 / 기획·프로그래밍 1명 (본인) |
 
 ---
 
-## 🎮 Gameplay
+## Gameplay
+
+| 전투 장면 | 상점 UI |
+| :---: | :---: |
+| <img src="ScreenShot/s2.jpg" width="100%" alt="전투 장면"> | <img src="ScreenShot/s3.jpg" width="100%" alt="상점 UI"> |
 
 게임 플레이 영상은 아래 링크에서 확인할 수 있습니다.
 
@@ -34,7 +41,21 @@ Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방
 
 ---
 
-## 👨‍💻 My Role
+## Download
+
+게임 실행파일은 아래 링크에서 다운로드 할 수 있습니다.
+
+**Windows**
+
+[Download for Windows](https://drive.google.com/file/d/19D6CXySd6lN7rgg42rRtS_mboQrVkVyU/view)
+
+**macOS**
+
+[Download for macOS](https://drive.google.com/file/d/1VpC8uMO6C5oWmSdndyjzkfCf9CmK16RZ/view)
+
+---
+
+## My Role
 
 ### Client Programming
 
@@ -52,9 +73,9 @@ Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방
 
 ---
 
-# 🎯 주요 구현 기능
+# 주요 구현 기능
 
-## 🔫 다형성을 활용한 무기 시스템
+## 다형성을 활용한 무기 시스템
 
 서로 다른 공격 방식을 가진 무기를 공통된 인터페이스로 관리하기 위해 `WeaponBase` 추상 클래스를 기반으로 무기 시스템을 구성했습니다.
 
@@ -64,16 +85,16 @@ Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방
 
 **관련 코드**
 
-- [WeaponBase.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Weapon/WeaponBase.cs)
-- [WeaponSingleRifle.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Weapon/WeaponSingleRifle.cs)
-- [WeaponRapidRifle.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Weapon/WeaponRapidRifle.cs)
-- [WeaponSniperRifle.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Weapon/WeaponSniperRifle.cs)
-- [WeaponRocket.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Weapon/WeaponRocket.cs)
-- [WeaponSwitchSystem.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Weapon/WeaponSwitchSystem.cs)
+- [WeaponBase.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Weapon/WeaponBase.cs)
+- [WeaponSingleRifle.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Weapon/WeaponSingleRifle.cs)
+- [WeaponRapidRifle.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Weapon/WeaponRapidRifle.cs)
+- [WeaponSniperRifle.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Weapon/WeaponSniperRifle.cs)
+- [WeaponRocket.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Weapon/WeaponRocket.cs)
+- [WeaponSwitchSystem.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Weapon/WeaponSwitchSystem.cs)
 
 ---
 
-## 👾 적 생성 및 스테이지 진행 시스템
+## 적 생성 및 스테이지 진행 시스템
 
 스테이지 진행에 따라 적의 등장 수와 생성 주기를 변경할 수 있도록 적 생성 시스템을 구현했습니다.
 
@@ -83,13 +104,13 @@ Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방
 
 **관련 코드**
 
-- [EnemyMemoryPool.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Enemy/EnemyMemoryPool.cs)
-- [EnemySpawnPoint.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Enemy/EnemySpawnPoint.cs)
-- [StageManager.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/GameManager/StageManager.cs)
+- [EnemyMemoryPool.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Enemy/EnemyMemoryPool.cs)
+- [EnemySpawnPoint.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Enemy/EnemySpawnPoint.cs)
+- [StageManager.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/GameManager/StageManager.cs)
 
 ---
 
-## 🎯 적 행동 및 공격 대상 전환 시스템
+## 적 행동 및 공격 대상 전환 시스템
 
 적의 이동과 공격 동작을 `EnemyFSM`에서 관리했습니다.
 
@@ -101,14 +122,14 @@ Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방
 
 **관련 코드**
 
-- [EnemyFSM.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Enemy/EnemyFSM.cs)
-- [EnemyStatusManager.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Enemy/EnemyStatusManager.cs)
-- [TurretController.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Item/TurretController.cs)
-- [Turret.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Item/Turret.cs)
+- [EnemyFSM.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Enemy/EnemyFSM.cs)
+- [EnemyStatusManager.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Enemy/EnemyStatusManager.cs)
+- [TurretController.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Item/TurretController.cs)
+- [Turret.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Item/Turret.cs)
 
 ---
 
-## ♻️ 오브젝트 풀링 기반 생성 관리
+## 오브젝트 풀링 기반 생성 관리
 
 게임 중 반복적으로 생성되는 오브젝트를 효율적으로 관리하기 위해 `MemoryPool` 클래스를 구현했습니다.
 
@@ -120,12 +141,12 @@ Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방
 
 **관련 코드**
 
-- [MemoryPool.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/MemoryPool.cs)
-- [EnemyMemoryPool.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Enemy/EnemyMemoryPool.cs)
+- [MemoryPool.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/MemoryPool.cs)
+- [EnemyMemoryPool.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Enemy/EnemyMemoryPool.cs)
 
 ---
 
-## 🛒 스테이지 간 성장 및 상점 시스템
+## 스테이지 간 성장 및 상점 시스템
 
 스테이지를 클리어한 후 획득한 재화를 사용해 플레이어와 장비를 강화할 수 있는 상점 시스템을 구현했습니다.
 
@@ -135,14 +156,14 @@ Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방
 
 **관련 코드**
 
-- [ShopManager.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/GameManager/ShopManager.cs)
-- [StageManager.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/GameManager/StageManager.cs)
-- [PlayerStatusManager.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Player/PlayerStatusManager.cs)
-- [WeaponBase.cs](https://github.com/Thispring/GameDesign01-ScriptOnly/blob/main/Script/Weapon/WeaponBase.cs)
+- [ShopManager.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/GameManager/ShopManager.cs)
+- [StageManager.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/GameManager/StageManager.cs)
+- [PlayerStatusManager.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Player/PlayerStatusManager.cs)
+- [WeaponBase.cs](https://github.com/Thispring/Cord-Marigold/blob/main/Script/Weapon/WeaponBase.cs)
 
 ---
 
-# 🛠 사용 기술
+# 사용 기술
 
 | 기술 | 활용 |
 | --- | --- |
@@ -150,14 +171,6 @@ Cord: Marigold는 플레이어가 직접 전투에 참여하면서 기지를 방
 | C# | 게임 로직 및 시스템 구현 |
 | Unity Physics | Raycast 기반 사격 및 게임 오브젝트 상호작용 처리 |
 | Unity UI | 체력, 탄약, 무기 정보 및 게임 인터페이스 구현 |
-
----
-
-# 🔗 Links
-
-### 🎥 Gameplay Video
-
-[YouTube - Cord: Marigold Gameplay](https://youtu.be/LIh10WImKrg)
 
 ---
 
